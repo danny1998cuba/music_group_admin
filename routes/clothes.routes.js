@@ -3,7 +3,7 @@ var router = express.Router();
 
 const midds = require('../middlewares').crudRoutes
 
-const controller = require('../controllers').userController
+const controller = require('../controllers').clothesController
 
 /* GET wp listing. */
 router.get('/', controller.findAll);
