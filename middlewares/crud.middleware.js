@@ -9,5 +9,5 @@ exports.idRequired = (req, res, next) => {
         }
     }
 
-    res.status(401).send("Debe proporcionar un ID valido")
+    res.status(401).send("Invalid Id")
 }

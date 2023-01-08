@@ -10,6 +10,7 @@ router.get('/', controller.findAll);
 router.get('/:id', midds.idRequired, controller.findById);
 router.post('/', controller.create);
 router.put('/:id', midds.idRequired, controller.update);
+router.put('/:id/close_contract', midds.idRequired, controller.endContract);
 router.delete('/all', controller.clear)
 router.delete('/:id', midds.idRequired, controller.delete);
 

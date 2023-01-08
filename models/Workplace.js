@@ -14,6 +14,9 @@ const wpSchema = new Schema({
     contract_from: {
         type: Date,
         default: new Date()
+    },
+    contract_to: {
+        type: Date
     }
 }, {
     versionKey: false,

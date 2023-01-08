@@ -23,12 +23,12 @@ exports.findById = (req, res) => {
 exports.create = (req, res) => {
     let wp = new Workplace(req.body)
     wp.save()
-    .then(r => {
-        res.status(201).send(r)
-    })
-    .catch(err => {
-        res.status(500).send(err)
-    })
+        .then(r => {
+            res.status(201).send(r)
+        })
+        .catch(err => {
+            res.status(500).send(err)
+        })
 }
 
 exports.update = (req, res) => {
@@ -39,6 +39,20 @@ exports.update = (req, res) => {
         .catch(err => {
             res.status(500).send(err)
         })
+}
+
+exports.endContract = (req, res) => {
+    if (req.query.date) {
+        Workplace.findByIdAndUpdate(req.params.id, { $set: { contract_to: req.query.date } })
+            .then(result => {
+                res.send(result)
+            })
+            .catch(err => {
+                res.status(500).send(err)
+            })
+    } else {
+        res.status(401).send('Contract finished date required')
+    }
 }
 
 exports.delete = (req, res) => {
