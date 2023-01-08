@@ -1,4 +1,4 @@
-const Workplace = require('../models/Workplace')
+const Workplace = require('../models').Workplace
 
 exports.findAll = (req, res) => {
     Workplace.find({})

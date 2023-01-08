@@ -1,7 +1,7 @@
-const Cloth = require('../models').Cloth
+const Gain = require('../models').Gain
 
 exports.findAll = (req, res) => {
-    Cloth.find({})
+    Gain.find({})
         .then(result => {
             res.send(result)
         })
@@ -11,7 +11,7 @@ exports.findAll = (req, res) => {
 }
 
 exports.findById = (req, res) => {
-    Cloth.findById(req.params.id)
+    Gain.findById(req.params.id_gain)
         .then(result => {
             res.send(result)
         })
@@ -21,8 +21,8 @@ exports.findById = (req, res) => {
 }
 
 exports.create = (req, res) => {
-    let cloth = new Cloth(req.body)
-    cloth.save()
+    let gain = new Gain(req.body)
+    gain.save()
         .then(r => {
             res.status(201).send(r)
         })
@@ -32,7 +32,7 @@ exports.create = (req, res) => {
 }
 
 exports.update = (req, res) => {
-    Cloth.findByIdAndUpdate(req.params.id, req.body)
+    Gain.findByIdAndUpdate(req.params.id_gain, req.body)
         .then(result => {
             res.send(result)
         })
@@ -42,7 +42,7 @@ exports.update = (req, res) => {
 }
 
 exports.delete = (req, res) => {
-    Cloth.findByIdAndDelete(req.params.id)
+    Gain.findByIdAndDelete(req.params.id_gain)
         .then(result => {
             res.send(result)
         })
@@ -52,7 +52,7 @@ exports.delete = (req, res) => {
 }
 
 exports.clear = (req, res) => {
-    Cloth.deleteMany({})
+    Gain.deleteMany({})
         .then(result => {
             res.send(`${result.deletedCount} rows affected`)
         })

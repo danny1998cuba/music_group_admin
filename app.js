@@ -26,7 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 const routers = require('./routes');
 
 app.use('/', routers.indexRouter);
+app.use('/activity', routers.activitiesRouter);
 app.use('/clothes', routers.clothesRouter);
+app.use('/gains', routers.gainsRouter);
 app.use('/song', routers.songsRouter);
 app.use('/users', routers.usersRouter);
 app.use('/wp', routers.wpRouter);

@@ -1,4 +1,4 @@
-const Song = require('../models/Song')
+const Song = require('../models').Song
 
 exports.findAll = (req, res) => {
     Song.find({})
