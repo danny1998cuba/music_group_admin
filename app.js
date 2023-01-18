@@ -29,6 +29,7 @@ app.use('/', routers.indexRouter);
 app.use('/activity', routers.activitiesRouter);
 app.use('/clothes', routers.clothesRouter);
 app.use('/gains', routers.gainsRouter);
+app.use('/member', routers.memberRouter);
 app.use('/song', routers.songsRouter);
 app.use('/users', routers.usersRouter);
 app.use('/wp', routers.wpRouter);
