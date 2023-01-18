@@ -23,16 +23,12 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')));
 
 /*  Routes  */
-const routers = require('./routes');
+const routers = require('./routes/v1/index.routes');
 
-app.use('/', routers.indexRouter);
-app.use('/activity', routers.activitiesRouter);
-app.use('/clothes', routers.clothesRouter);
-app.use('/gains', routers.gainsRouter);
-app.use('/member', routers.memberRouter);
-app.use('/song', routers.songsRouter);
-app.use('/users', routers.usersRouter);
-app.use('/wp', routers.wpRouter);
+app.get('/', function (req, res, next) {
+  res.render('index', { title: 'Music Group Admin API' });
+});
+app.use('/v1', routers);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

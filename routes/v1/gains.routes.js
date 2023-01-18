@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-const midds = require('../middlewares').crudRoutes
+const midds = require('../../middlewares').crudRoutes
 
-const controller = require('../controllers').gainsController
+const controller = require('../../controllers').gainsController
 
 /* GET wp listing. */
 router.get('/', controller.findAll);
