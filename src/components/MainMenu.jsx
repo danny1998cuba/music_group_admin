@@ -14,7 +14,7 @@ export const MainMenu = () => {
                 mainMenuItems.map((menu, index) => (
                   <li className={index === 0 ? 'active' : ''} key={menu.id}>
                     <a data-toggle="tab" href={`#${menu.id}`}>
-                      <i className={`notika-icon ${menu.icon}`}></i> {menu.name}
+                      <i className={`${menu.icon.includes('notika') ? 'notika-icon' : 'fa'} ${menu.icon}`}></i> {menu.name}
                     </a>
                   </li>
                 ))
@@ -27,7 +27,7 @@ export const MainMenu = () => {
                     <ul className="notika-main-menu-dropdown">
                       {
                         menu.submenu.map(submenu => (
-                          <li><NavLink to={submenu.href}>{submenu.name}</NavLink>
+                          <li key={submenu.name}><NavLink to={submenu.href}>{submenu.name}</NavLink>
                           </li>
                         ))
                       }

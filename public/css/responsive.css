@@ -126,7 +126,7 @@
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
 	.main-menu-area{
-		display:none;
+		display:block;
 	}
 	.mobile-menu-area{
 		display:block;
@@ -328,8 +328,21 @@
 @media (max-width: 767px) {
 	.container {width:300px}
 	.main-menu-area{
-		display:none;
+		display:block;
 	}
+	.main-menu-area ul.nav {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 10px;
+	}
+	.main-menu-area ul.notika-main-menu-dropdown {
+		display: flex;
+		flex-direction: column;
+	}
+
+
 	.mobile-menu-area{
 		display:block;
 	}
@@ -642,8 +655,8 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	.container {width:450px}
 	.main-menu-area{
-		display:none;
-	}
+		display:block;
+	}	
 	.lg-res-mg-bl{
 		display:block;
 	}

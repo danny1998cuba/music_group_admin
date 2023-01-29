@@ -2,7 +2,6 @@
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { MainMenu } from './MainMenu'
-import { MobileMenu } from './MobileMenu'
 
 // Auth Components
 import { ForgetPass } from './auth/ForgetPass'
@@ -14,7 +13,6 @@ export {
     Footer,
     Header,
     MainMenu,
-    MobileMenu,
 
     //Auth Components
     ForgetPass,

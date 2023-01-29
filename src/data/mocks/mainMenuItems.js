@@ -1,105 +1,87 @@
+import { AppRoutes } from '../constants'
+
 export const mainMenuItems = [
     {
-        id: 'Home',
+        id: 'Dashboard',
         icon: 'notika-house',
-        name: 'Home',
+        name: 'Dashboard',
         submenu: [
             {
-                name: 'Dashboard One',
-                href: 'index.html'
-            },
-            {
-                name: 'Dashboard Two',
-                href: 'index-2.html'
-            },
-            {
-                name: 'Dashboard Three',
-                href: 'index-3.html'
-            },
-            {
-                name: 'Dashboard Four',
-                href: 'index-4.html'
-            },
-            {
-                name: 'Analytics',
-                href: 'analytics.html'
-            },
-            {
-                name: 'Widgets',
-                href: 'widgets.html'
-            }
-        ]
-    },
-    {
-        id: 'mailbox',
-        icon: 'notika-mail',
-        name: 'Email',
-        submenu: [
-            {
-                name: 'Inbox',
-                href: 'inbox.html'
-            },
-            {
-                name: 'View Email',
-                href: 'view-email.html'
-            },
-            {
-                name: 'Compose Email',
-                href: 'compose-email.html'
+                name: 'Home',
+                href: `/${AppRoutes.MainRoutes.dashboard}`
             },
         ]
     },
     {
-        id: 'Interface',
-        icon: 'notika-edit',
-        name: 'Interface',
+        id: 'music',
+        icon: 'fa-music',
+        name: 'Repertory',
         submenu: [
             {
-                name: 'Animations',
-                href: 'Animations.html'
+                name: 'Manage',
+                href: `/${AppRoutes.MainRoutes.dashboard}/${AppRoutes.AdminRoutes.song}`
             },
             {
-                name: 'Google Maps',
-                href: 'maps.html'
-            },
-            {
-                name: 'Data Maps',
-                href: 'data-maps.html'
-            },
-            {
-                name: 'Code Editor',
-                href: 'editor.html'
+                name: 'Songs',
+                href: `/${AppRoutes.MainRoutes.dashboard}/not_imp`
             },
         ]
     },
     {
-        id: 'Charts',
-        icon: 'notika-bar-chart',
-        name: 'Charts',
+        id: 'activities',
+        icon: 'fa-calendar',
+        name: 'Activities',
         submenu: [
             {
-                name: 'Flot Charts',
-                href: 'flot-charts.html'
+                name: 'Manage',
+                href: `/${AppRoutes.MainRoutes.dashboard}/${AppRoutes.AdminRoutes.activity}`
             },
             {
-                name: 'Bar Charts',
-                href: 'bar-charts.html'
-            }
+                name: 'Sumary',
+                href: `/${AppRoutes.MainRoutes.dashboard}/not_imp`
+            },
+            {
+                name: 'Gains Analytics',
+                href: `/${AppRoutes.MainRoutes.dashboard}/not_imp`
+            },
+            {
+                name: 'Workplaces',
+                href: `/${AppRoutes.MainRoutes.dashboard}/${AppRoutes.AdminRoutes.workplace}`
+            },
         ]
     },
     {
-        id: 'Tables',
+        id: 'clothes',
         icon: 'notika-windows',
-        name: 'Tables',
+        name: 'Clothes',
         submenu: [
             {
-                name: 'Normal Table',
-                href: 'normal-table.html'
+                name: 'Manage',
+                href: `/${AppRoutes.MainRoutes.dashboard}/${AppRoutes.AdminRoutes.cloth}`
             },
             {
-                name: 'Data Table',
-                href: 'data-table.html'
+                name: 'Asignation',
+                href: `/${AppRoutes.MainRoutes.dashboard}/not_imp`
             }
         ]
-    }
+    },
+    {
+        id: 'persons',
+        icon: 'fa-users',
+        name: 'Persons',
+        submenu: [
+            {
+                name: 'Members',
+                href: `/${AppRoutes.MainRoutes.dashboard}/${AppRoutes.AdminRoutes.members}`
+            },
+            {
+                name: 'Users',
+                href: `/${AppRoutes.MainRoutes.dashboard}/${AppRoutes.AdminRoutes.user}`
+            },
+            {
+                name: 'Roles',
+                href: `/${AppRoutes.MainRoutes.dashboard}/not_imp`
+            },
+        ]
+    },
 ]

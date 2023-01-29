@@ -1,5 +1,7 @@
 export const List = () => {
     return (
-        <div>List</div>
+        <div>
+            <h3>Members</h3>
+        </div>
     )
 }

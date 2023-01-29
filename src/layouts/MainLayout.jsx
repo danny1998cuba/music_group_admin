@@ -5,7 +5,6 @@ export const MainLayout = () => {
     return (
         <>
             <Header />
-            <MobileMenu />
             <MainMenu />
 
             <div className="main" style={{ 'minHeight': '60vh' }}>
