@@ -1,9 +1,8 @@
+import { NavLink } from "react-router-dom"
 import { mainMenuItems } from "../data/mocks"
 
 // TODO - Change Active Menu
 export const MainMenu = () => {
-  const data = mainMenuItems
-
   return (
     <div className="main-menu-area mg-tb-40">
       <div className="container">
@@ -13,7 +12,7 @@ export const MainMenu = () => {
 
               {
                 mainMenuItems.map((menu, index) => (
-                  <li className={index == 0 ? 'active' : ''} key={menu.id}>
+                  <li className={index === 0 ? 'active' : ''} key={menu.id}>
                     <a data-toggle="tab" href={`#${menu.id}`}>
                       <i className={`notika-icon ${menu.icon}`}></i> {menu.name}
                     </a>
@@ -24,11 +23,11 @@ export const MainMenu = () => {
             <div className="tab-content custom-menu-content">
               {
                 mainMenuItems.map((menu, index) => (
-                  <div key={menu.name} id={menu.id} className={`tab-pane notika-tab-menu-bg animated flipInX ${index == 0 ? 'in active' : ''}`}>
+                  <div key={menu.id} id={menu.id} className={`tab-pane notika-tab-menu-bg animated flipInX ${index === 0 ? 'in active' : ''}`}>
                     <ul className="notika-main-menu-dropdown">
                       {
                         menu.submenu.map(submenu => (
-                          <li><a href={submenu.href}>{submenu.name}</a>
+                          <li><NavLink to={submenu.href}>{submenu.name}</NavLink>
                           </li>
                         ))
                       }

@@ -1,8 +1,8 @@
-import { MainLayout } from "./layouts";
+import { MainRoutes } from "./data/routes";
 
 function App() {
   return (
-    <MainLayout />
+    <MainRoutes />
   );
 }
 

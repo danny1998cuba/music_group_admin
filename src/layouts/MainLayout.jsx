@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import { Footer, Header, MainMenu, MobileMenu } from "../components";
 
 export const MainLayout = () => {
@@ -7,11 +8,9 @@ export const MainLayout = () => {
             <MobileMenu />
             <MainMenu />
 
-            <div className="main" style={{ 'min-height': '60vh' }}>
+            <div className="main" style={{ 'minHeight': '60vh' }}>
                 <div className="container">
-                    <p className="pl-5">
-                        Main Section
-                    </p>
+                    <Outlet />
                 </div>
             </div>
 

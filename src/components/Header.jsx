@@ -1,5 +1,8 @@
 // TODO: Dropdowns
 
+import { Link } from "react-router-dom"
+import { AppRoutes } from "../data/constants"
+
 export const Header = () => {
   return (
     <div className="header-top-area">
@@ -7,7 +10,7 @@ export const Header = () => {
         <div className="row">
           <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div className="logo-area">
-              <a href="#"><img src="img/logo/logo.png" alt="" /></a>
+              <Link to={`/${AppRoutes.MainRoutes.dashboard}`}><img src="/img/logo/logo.png" alt="" /></Link>
             </div>
           </div>
           <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
