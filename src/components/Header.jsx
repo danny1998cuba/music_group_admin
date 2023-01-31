@@ -10,7 +10,7 @@ export const Header = () => {
         <div className="row">
           <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div className="logo-area">
-              <Link to={`/${AppRoutes.MainRoutes.dashboard}`}><img src="/img/logo/logo.png" alt="" /></Link>
+              <Link to={`/${AppRoutes.MainRoutes.dashboard}`}><img src="/images/logo-dark.svg" alt="logo" className="logo" /></Link>
             </div>
           </div>
           <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -21,7 +21,7 @@ export const Header = () => {
                   <div role="menu" className="dropdown-menu search-dd animated flipInX">
                     <div className="search-input" role="menuitem">
                       <i className="notika-icon notika-left-arrow"></i>
-                      <input type="text"/>
+                      <input type="text" />
                     </div>
                   </div>
                 </li>
@@ -179,25 +179,25 @@ export const Header = () => {
                           <div className="lead-content">
                             <p>Google Chrome Extension</p>
                           </div>
-                          <div className="progress-bar wow fadeInLeft" data-progress="85%" style={{width: '85%'}} data-wow-duration="1.5s" data-wow-delay="1.2s"><span>85%</span> </div>
+                          <div className="progress-bar wow fadeInLeft" data-progress="85%" style={{ width: '85%' }} data-wow-duration="1.5s" data-wow-delay="1.2s"><span>85%</span> </div>
                         </div>
                         <div className="progress">
                           <div className="lead-content">
                             <p>Social Internet Projects</p>
                           </div>
-                          <div className="progress-bar wow fadeInLeft" data-progress="75%" style={{width: '75%'}} data-wow-duration="1.5s" data-wow-delay="1.2s"><span>75%</span> </div>
+                          <div className="progress-bar wow fadeInLeft" data-progress="75%" style={{ width: '75%' }} data-wow-duration="1.5s" data-wow-delay="1.2s"><span>75%</span> </div>
                         </div>
                         <div className="progress">
                           <div className="lead-content">
                             <p>Bootstrap Admin</p>
                           </div>
-                          <div className="progress-bar wow fadeInLeft" data-progress="93%" style={{width: '65%'}} data-wow-duration="1.5s" data-wow-delay="1.2s"><span>65%</span> </div>
+                          <div className="progress-bar wow fadeInLeft" data-progress="93%" style={{ width: '65%' }} data-wow-duration="1.5s" data-wow-delay="1.2s"><span>65%</span> </div>
                         </div>
                         <div className="progress progress-bt">
                           <div className="lead-content">
                             <p>Youtube App</p>
                           </div>
-                          <div className="progress-bar wow fadeInLeft" data-progress="55%" style={{width: '55%'}} data-wow-duration="1.5s" data-wow-delay="1.2s"><span>55%</span> </div>
+                          <div className="progress-bar wow fadeInLeft" data-progress="55%" style={{ width: '55%' }} data-wow-duration="1.5s" data-wow-delay="1.2s"><span>55%</span> </div>
                         </div>
                       </div>
                     </div>

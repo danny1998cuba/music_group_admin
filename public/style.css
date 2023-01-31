@@ -189,6 +189,9 @@ body {}
 .logo-area{
 	padding:14px 0px;
 }
+.logo-area .logo {
+    height: 50px;
+}
 .nav.navbar-nav.notika-top-nav{
 	float: right;
 }
@@ -226,6 +229,12 @@ body {}
     left: -865px;
     width: 1130px;
 }
+
+.header-top-area .container .row {
+    display: flex;
+    align-items: center;    
+}
+
 .header-top-menu .nav.notika-top-nav li .message-dd {
     position: absolute;
     top: 100%;

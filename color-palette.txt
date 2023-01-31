@@ -1,0 +1,10 @@
+primary: #00c292
+secondary: #F6F8FA
+text: #333
+details: #884713
+
+Dark Palette
+primary: #005943
+secondary: #090c15
+text: #aaa
+details: #ddd

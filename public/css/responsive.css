@@ -356,6 +356,9 @@
 		float: unset;
 		margin:0px;
 	}
+	.header-top-area .container .row {
+		flex-direction: column;
+	}
 	.header-top-menu .nav.navbar-nav.notika-top-nav li{
 		display:inline-block;
 	}
