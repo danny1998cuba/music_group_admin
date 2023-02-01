@@ -389,6 +389,7 @@
 
 	.nav.navbar-nav.notika-top-nav {
 		float: unset;
+		display: flex;
 	}
 
 	.header-top-menu {

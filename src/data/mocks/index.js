@@ -1,5 +1,7 @@
 import { mainMenuItems } from './mainMenuItems'
+import { wps } from './workplaces.data'
 
 export {
-    mainMenuItems
+    mainMenuItems,
+    wps
 }

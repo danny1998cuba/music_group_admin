@@ -10,14 +10,14 @@ export const MainMenu = () => {
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-            <div class="navbar navbar-default">
-              <div class="navbar-header"><p class="navbar-brand" style={{ 'margin': '0' }}>Options</p>
-                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style={{ 'color': '#777' }}>
+            <div className="navbar navbar-default">
+              <div className="navbar-header"><p className="navbar-brand" style={{ 'margin': '0' }}>Options</p>
+                <button className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style={{ 'color': '#777' }}>
                   <i className="fa fa-bars"></i>
-                </a>
+                </button>
               </div>
 
-              <div class="navbar-collapse collapse">
+              <div className="navbar-collapse collapse">
                 <ul className="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                   {
                     mainMenuItems.map((menu, index) => (

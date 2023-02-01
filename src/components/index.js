@@ -8,6 +8,9 @@ import { ForgetPass } from './auth/ForgetPass'
 import { SignIn } from './auth/SignIn'
 import { SignUp } from './auth/SignUp'
 
+// Custom Components
+import { DataTable } from './DataTable'
+
 export {
     //Layout Components
     Footer,
@@ -18,4 +21,7 @@ export {
     ForgetPass,
     SignIn,
     SignUp,
+
+    // Custom Components
+    DataTable,
 }

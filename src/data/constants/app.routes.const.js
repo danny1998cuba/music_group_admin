@@ -13,3 +13,9 @@ export const AdminRoutes = {
     user: 'user',
     workplace: 'workplace',
 }
+
+export const CrudRoutes = {
+    create: 'create',
+    details: 'details',
+    manage: 'manage'
+}

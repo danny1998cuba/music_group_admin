@@ -5,7 +5,7 @@
     border-color: transparent;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     .navbar-header {
         float: none;
         display: block;
