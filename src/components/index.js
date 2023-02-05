@@ -10,6 +10,8 @@ import { SignUp } from './auth/SignUp'
 
 // Custom Components
 import { DataTable } from './DataTable'
+import { RecentAdded } from './RecentAdded'
+
 
 export {
     //Layout Components
@@ -24,4 +26,5 @@ export {
 
     // Custom Components
     DataTable,
+    RecentAdded
 }

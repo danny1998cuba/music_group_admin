@@ -14,6 +14,9 @@ export const Error = ({ number, msg, action }) => {
                 <button role='link' className="btn" onClick={() => {
                     navigate('/dashboard', { replace: true })
                 }}>Dashboard</button>
+                <button role='link' className="btn" onClick={() => {
+                    navigate(-1, { replace: true })
+                }}>Return</button>
                 {/* <a href="#" className="btn error-btn-mg">Report Problem</a> */}
             </div>
         </div>
