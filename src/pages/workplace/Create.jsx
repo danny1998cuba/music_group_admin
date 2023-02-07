@@ -1,20 +1,23 @@
 import { DynamicForm } from "d98c_dynamic-forms";
 import { useState } from "react";
-import { RecentAdded, Form } from "../../components"
-import { wps, formInputs } from '../../data/mocks'
+import { RecentAdded } from "../../components"
+import { Forms } from "../../data/constants";
+import { wps } from '../../data/mocks'
 import { useNotikaFormStyles } from "../../hooks";
 
 export const Create = () => {
-    const styles = useNotikaFormStyles(
+    useNotikaFormStyles(
         { controls: true, button: true },
         ['btn', 'btn-success', 'notika-btn-success', 'waves-effect']
     )
+
     const [value, setValue] = useState({})
 
     // formControls()
 
     const onSubmit = (data) => {
         setValue(data)
+        console.log(value)
     };
 
     return (
@@ -25,7 +28,7 @@ export const Create = () => {
                 <div className="col-lg-8 col-md-7 col-sm-6 col-xs-12">
                     {/* <Form onSubmit={handleLogin}></Form> */}
                     <DynamicForm
-                        formInputs={formInputs}
+                        formInputs={Forms.workplaceForm}
                         onSubmit={onSubmit}
                     />
                 </div>
