@@ -3859,6 +3859,7 @@ hr {
 .nk-int-st [type="number"],
 .nk-int-st [type="password"],
 .nk-int-st [type="date"],
+.nk-int-st select,
 .nk-int-st [type="file"] {
     box-shadow: none;
     border-top: 0px solid #ccc;

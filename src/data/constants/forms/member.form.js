@@ -90,22 +90,25 @@ const memberForm = [
         ],
     },
     {
-        type: "select",
+        type: "radio-group",
         name: "sex",
-        label: "Sex: ",
+        label: "Sex",
+        class: "form-group",
         value: "",
         options: [
             {
-                value: "m",
-                desc: "Male",
+                value: 'm',
+                desc: "Male"
             },
             {
+
                 value: "f",
                 desc: "Female"
             },
             {
+
                 value: "o",
-                desc: "Ohter"
+                desc: "Other"
             },
         ],
         validations: [

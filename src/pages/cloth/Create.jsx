@@ -6,7 +6,7 @@ import { useNotikaFormStyles } from "../../hooks";
 
 export const Create = () => {
     useNotikaFormStyles(
-        { controls: true, button: true },
+        { controls: true, button: true, select: true },
         ['btn', 'btn-success', 'notika-btn-success', 'waves-effect']
     )
 

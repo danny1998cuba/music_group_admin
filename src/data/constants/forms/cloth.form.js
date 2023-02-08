@@ -3,6 +3,7 @@ const clothForm = [
         type: "select",
         name: "category",
         label: "Category: ",
+        class: "form-group",
         value: "",
         // class: "form-group",
         options: [

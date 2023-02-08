@@ -22,6 +22,7 @@ const activityForm = [
         name: "workplace",
         label: "Workplace",
         value: "",
+        class: "form-group",
         options: [],
         validations: [
             {
@@ -35,6 +36,7 @@ const activityForm = [
         name: "clothes",
         label: "clothes",
         value: "",
+        class: "form-group",
         options: []
     },
     // TODO: Add a custom dynamic component that accepts an array of objects of any type for the currencies

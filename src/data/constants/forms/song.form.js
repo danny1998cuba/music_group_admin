@@ -39,6 +39,7 @@ const songForm = [
         type: "select",
         name: "composer_country",
         label: "Country",
+        class: "form-group",
         value: "",
         options: [
             {
@@ -161,6 +162,7 @@ const songForm = [
         type: "select",
         name: "details_signature",
         label: "Signature",
+        class: "form-group",
         value: "",
         options: [
             {
@@ -195,6 +197,7 @@ const songForm = [
         type: "select",
         name: "details_key",
         label: "Key",
+        class: "form-group",
         value: "",
         options: [
             {

@@ -3,7 +3,9 @@ import { useEffect } from 'react';
 export const useNotikaFormStyles = (apply, buttonClasses) => {
     useEffect(() => {
         apply.controls && formControls()
+        apply.select && selectControls()
         apply.button && buttonList(buttonClasses)
+        apply.radio && radioGroupControls()
     }, [])
 
     return {}
@@ -14,20 +16,70 @@ const formControls = () => {
 
     inputs.forEach(fg => {
         let input = [...fg.childNodes].find(inp => inp.nodeName === 'INPUT')
-        input.classList.add('form-control')
+
+        if (input) {
+            input.classList.add('form-control')
+
+            let wrapper = document.createElement('div')
+            wrapper.classList.add('nk-int-st')
+            input.parentElement.replaceChild(wrapper, input)
+            wrapper.appendChild(input)
+
+            wrapper.addEventListener('focusin', () => wrapper.classList.add('nk-toggled'))
+            wrapper.addEventListener('focusout', () => wrapper.classList.remove('nk-toggled'))
+
+            if (input.type === 'file') {
+                fileControl(input, wrapper)
+            }
+        }
+    })
+}
+
+const selectControls = () => {
+    let selects = [...document.querySelectorAll('.select')]
+
+    selects.forEach(fg => {
+        let select = [...fg.childNodes].find(inp => inp.nodeName === 'SELECT')
+
+        if (select) {
+            select.classList.add('form-control')
+
+            let wrapper = document.createElement('div')
+            wrapper.classList.add('nk-int-st')
+            select.parentElement.replaceChild(wrapper, select)
+            wrapper.appendChild(select)
+
+            wrapper.addEventListener('focusin', () => wrapper.classList.add('nk-toggled'))
+            wrapper.addEventListener('focusout', () => wrapper.classList.remove('nk-toggled'))
+        }
+    })
+}
+
+const radioGroupControls = () => {
+    let groups = [...document.querySelectorAll('.radio-group')]
+
+    groups.forEach(group => {
+        let radios = [...document.querySelectorAll('.radio-group label')]
+
+        let label = group.querySelector('b')
+        let lbl = document.createElement('label')
+        lbl.textContent = label.textContent
+        group.replaceChild(lbl, label)
 
         let wrapper = document.createElement('div')
         wrapper.classList.add('nk-int-st')
-        input.parentElement.replaceChild(wrapper, input)
-        wrapper.appendChild(input)
 
-        wrapper.addEventListener('focusin', () => wrapper.classList.add('nk-toggled'))
-        wrapper.addEventListener('focusout', () => wrapper.classList.remove('nk-toggled'))
+        radios.forEach(radio => {
+            radio.classList.add('radio-inline')
+            wrapper.appendChild(radio)
+        })
 
-        if (input.type == 'file') {
-            fileControl(input, wrapper)
-        }
+        group.appendChild(wrapper)
     })
+
+
+
+
 }
 
 const fileControl = (input, wrapper) => {
