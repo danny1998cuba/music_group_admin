@@ -6315,3 +6315,14 @@ form .file-wrapper {
     align-items: center;
     /* justify-content: space-evenly; */
 }
+
+.details-box .row {
+    margin: 20px 0;
+}
+
+.details-box .row .col {
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+    height: 100%;
+}

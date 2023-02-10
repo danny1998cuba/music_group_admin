@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import { EditText, EditTextarea } from 'react-edit-text'
 import { useNavigate, useParams } from 'react-router-dom'
+import 'react-edit-text/dist/index.css'
 
-import { wps } from '../../data/mocks'
+import { data } from '../../data/mocks'
 
 export const Details = () => {
     const navigate = useNavigate()
@@ -9,13 +11,24 @@ export const Details = () => {
     const [element, setElement] = useState({})
 
     useEffect(() => {
-        let finded = wps.find(el => el.id === params.id)
+        let finded = data.clothes.find(el => el.id === params.id)
         if (!finded) {
             navigate('/error', { replace: true })
         }
         setElement(finded)
     }, [navigate, params])
 
+    const transparentEditBtnProps = { style: { background: 'transparent' } }
+
+    const handleSave = ({ name, value, prevValue }) => {
+        if (value !== prevValue) {
+            element[name] = value
+        }
+    }
+
+    const handleSubmit = (e) => {
+        console.log(element)
+    }
 
     return (
         <div>

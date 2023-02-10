@@ -29,6 +29,6 @@ export const crudRoutes = function (clazz) {
         <Route key={'modify'} path={`${routes.CrudRoutes.manage}`} element={clazz.Manage && <clazz.Manage />} />,
         <Route key={'details'} path={':id'} element={clazz.Details && <clazz.Details element={{ name: 'Element' }} />} />,
 
-        <Route key={'404'} path='*' element={<Navigate to={`/${routes.MainRoutes.error}`} replace={true} />} />
+        // <Route key={'404'} path='*' element={<Navigate to={`/${routes.MainRoutes.error}`} replace={true} />} />
     ]
 }

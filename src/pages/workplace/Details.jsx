@@ -16,6 +16,19 @@ export const Details = () => {
         setElement(finded)
     }, [navigate, params])
 
+    const transparentEditBtnProps = { style: { background: 'transparent' } }
+
+    const handleSave = ({ name, value, prevValue }) => {
+        if (value !== prevValue) {
+            element[name] = value
+        }
+    }
+
+    const handleSubmit = (e) => {
+        console.log(element)
+    }
+
+
     return (
         <div>
             <h3>{element.name}</h3>

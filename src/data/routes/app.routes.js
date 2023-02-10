@@ -57,6 +57,6 @@ export const AdminRoutes = () => {
         <Route key={'user'} path={`${routes.AdminRoutes.user}`} element={<User.Layout />} children={crudRoutes(User)} />,
         <Route key={'workplace'} path={`${routes.AdminRoutes.workplace}`} element={<Workplace.Layout />} children={crudRoutes(Workplace)} />,
         // <Route path='*' element={<Navigate to={`/${routes.MainRoutes.dashboard}`} replace={true} />} />
-        <Route key={'404'} path='*' element={<Navigate to={`/${routes.MainRoutes.error}`} replace={true} />} />
+        // <Route key={'404'} path='*' element={<Navigate to={`/${routes.MainRoutes.error}`} replace={true} />} />
     ]
 }

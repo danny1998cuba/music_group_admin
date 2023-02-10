@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom"
 import { DataTable } from "../../components"
 import { AppRoutes } from "../../data/constants"
+import { data } from "../../data/mocks"
 
 export const List = () => {
     const navigate = useNavigate()
@@ -22,15 +23,19 @@ export const List = () => {
                     <DataTable
                         schema={[
                             {
-                                id: 'name',
-                                show: 'Name'
+                                id: 'title',
+                                show: 'Title'
                             },
                             {
-                                id: 'contract_from',
-                                show: 'Contract From'
-                            }
+                                id: 'gender',
+                                show: 'Gender'
+                            },
+                            {
+                                id: 'arranger',
+                                show: 'Arranger'
+                            },
                         ]}
-                        data={[]}
+                        data={data.songs}
                         handler={function (element) {
                             navigate(
                                 `/${AppRoutes.MainRoutes.dashboard}/${AppRoutes.AdminRoutes.song}/${element.id}`,

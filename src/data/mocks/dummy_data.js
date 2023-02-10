@@ -1,0 +1,94 @@
+export const clothes = [
+    {
+        id: 'lasdafdsf432',
+        category: 'Pant',
+        color: 'Black',
+        description: 'lorem ipsum bla vla bla'
+    },
+    {
+        id: 'lasdafdsge32',
+        category: 'Shirt',
+        color: 'Black',
+        description: 'lorem ipsum bla vla bla'
+    },
+    {
+        id: 'lasdafdsf462',
+        category: 'Shirt',
+        color: 'Blue',
+        description: 'lorem ipsum bla vla bla'
+    },
+]
+export const members = [
+    {
+        id: 'dasfdsf6s54',
+        first_name: 'Daniel',
+        last_name: 'Gonzalez',
+        identification: '98022405864',
+        birth_date: new Date('1998-02-24'),
+        position: 'Baritone sax',
+        sex: 'm'
+    },
+    {
+        id: 'dasfdsfd354',
+        first_name: 'Juancho',
+        last_name: 'Fernandez',
+        identification: '86042304796',
+        birth_date: new Date('1986-04-23'),
+        position: 'Clarinet',
+        sex: 'm'
+    },
+]
+export const songs = [
+    {
+        id: 'adsaf5+89r',
+        title: 'El cuarto de Tula',
+        composer: [
+            {
+                name: 'Marcelino Perez',
+                country: 'Cuba',
+                birth_year: 1953,
+            },
+        ],
+        arranger: 'Fulanito de Tath',
+        gender: 'Son',
+        details: {
+            tempo: 80,
+            signature: '4/4',
+            key: 'A',
+            measures_number: 54
+
+        },
+        scores: []
+    },
+]
+export const acts = [
+    {
+        id: 'dasjdksj2',
+        date: new Date(),
+        workplace: 'Villa Tropico',
+        clothes: ['Black Shirt', 'Black Pant'],
+        gains: {
+            currecies: [
+                {
+                    currency: 'USD',
+                    amount: 5,
+                    change: 160
+                },
+                {
+                    currency: 'CAD',
+                    amount: 5,
+                    change: 120
+                },
+                {
+                    currency: 'CUP',
+                    amount: 1000
+                },
+            ],
+            founding: {
+                type: Number,
+                required: true,
+                default: 0
+            }
+        }
+    },
+]
