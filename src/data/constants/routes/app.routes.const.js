@@ -16,6 +16,5 @@ export const AdminRoutes = {
 
 export const CrudRoutes = {
     create: 'create',
-    details: 'details',
-    manage: 'manage'
+    details: 'details'
 }

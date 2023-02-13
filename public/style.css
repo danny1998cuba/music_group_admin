@@ -6316,7 +6316,7 @@ form .file-wrapper {
     /* justify-content: space-evenly; */
 }
 
-.details-box .row {
+.details-box .row:not(.no-margin) {
     margin: 20px 0;
 }
 
@@ -6325,4 +6325,20 @@ form .file-wrapper {
     align-items: center;
     min-height: 36px;
     height: 100%;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
 }

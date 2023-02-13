@@ -27,8 +27,8 @@ export const List = () => {
                                 show: 'Title'
                             },
                             {
-                                id: 'gender',
-                                show: 'Gender'
+                                id: 'genre',
+                                show: 'Genre'
                             },
                             {
                                 id: 'arranger',

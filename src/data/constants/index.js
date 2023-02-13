@@ -1,6 +1,6 @@
-import * as ApiRoutes from './api.routes.const'
-import * as AppRoutes from './app.routes.const'
-import * as Errors from './errors.const'
+import * as ApiRoutes from './routes/api.routes.const'
+import * as AppRoutes from './routes/app.routes.const'
+import * as Errors from './errors/errors.const'
 
 import * as Forms from './forms'
 

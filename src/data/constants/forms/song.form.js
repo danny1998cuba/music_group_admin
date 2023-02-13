@@ -124,8 +124,8 @@ const songForm = [
     },
     {
         type: "text",
-        name: "gender",
-        placeholder: "Gender",
+        name: "genre",
+        placeholder: "Genre",
         value: "",
         class: "form-group",
         validations: [
@@ -136,7 +136,7 @@ const songForm = [
             },
             {
                 type: "required",
-                message: "The gender is required"
+                message: "The genre is required"
             },
         ],
     },

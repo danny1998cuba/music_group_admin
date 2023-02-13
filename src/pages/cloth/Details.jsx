@@ -32,7 +32,61 @@ export const Details = () => {
 
     return (
         <div>
-            <h3>{element.name}</h3>
+            <h3>Cloth</h3>
+            <hr />
+
+            <div className="details-box">
+                <div className="row">
+                    <div className="col col-sm-2">
+                        <b>Category: </b>
+                    </div>
+                    <div className="col-sm-10">
+                        <EditText
+                            name='category'
+                            defaultValue={element.category}
+                            placeholder='Category empty'
+                            onSave={handleSave}
+                            showEditButton
+                            editButtonProps={transparentEditBtnProps}
+                        />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col col-sm-2">
+                        <b>Color: </b>
+                    </div>
+                    <div className="col-sm-10">
+                        <EditText
+                            name='color'
+                            defaultValue={element.color}
+                            placeholder='Color empty'
+                            onSave={handleSave}
+                            showEditButton
+                            editButtonProps={transparentEditBtnProps}
+                        />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col col-sm-2">
+                        <b>Description: </b>
+                    </div>
+                    <div className="col-sm-10">
+                        <EditTextarea
+                            name='description'
+                            defaultValue={element.description}
+                            placeholder='No description'
+                            onSave={handleSave}
+                            rows={5}
+                        />
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-12">
+                        <button className="btn btn-success notika-btn-success" onClick={handleSubmit}>Save changes</button>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

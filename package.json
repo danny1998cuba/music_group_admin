@@ -9,6 +9,7 @@
     "@types/react-edit-text": "^5.0.1",
     "bootstrap": "^5.2.3",
     "d98c_dynamic-forms": "^0.9.1",
+    "moment": "^2.29.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-edit-text": "^5.0.2",

@@ -50,7 +50,7 @@ export const songs = [
             },
         ],
         arranger: 'Fulanito de Tath',
-        gender: 'Son',
+        genre: 'Son',
         details: {
             tempo: 80,
             signature: '4/4',
@@ -58,7 +58,9 @@ export const songs = [
             measures_number: 54
 
         },
-        scores: []
+        scores: [
+            '/ildas/fds4fs65as.pdf'
+        ]
     },
 ]
 export const acts = [
