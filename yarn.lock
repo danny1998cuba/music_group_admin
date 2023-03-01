@@ -3235,10 +3235,10 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.1.tgz#841b532c45c758ee546a11d5bd7b7b473c8c30b9"
   integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
 
-d98c_dynamic-forms@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/d98c_dynamic-forms/-/d98c_dynamic-forms-0.9.1.tgz#cc0d192d8fb6b30c4ca76123428d2a9ec6872682"
-  integrity sha512-ljBGCS0+Zo4+xJDJmz593pSst5o+5rOvT0z260v96rPr/9z8jy+BLnG9odtuIn1v8DVoGyxKNCS0W+nOoeqqNQ==
+d98c_dynamic-forms@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/d98c_dynamic-forms/-/d98c_dynamic-forms-1.0.0.tgz#dc88c12c1c403b03adf74a61a9c466ab60a9d72a"
+  integrity sha512-ZXBrkAxUrS1BuCmlHev2iXDJIyiE2S1RFiAZUssAvEubvDeRJJUc2sDZRwnDemhWmy+2UsuGZGbgBvwOkKZnjA==
   dependencies:
     formik "^2.2.9"
     yup "^0.32.11"

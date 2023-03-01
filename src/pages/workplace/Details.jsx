@@ -5,6 +5,7 @@ import 'react-edit-text/dist/index.css'
 import { wps } from '../../data/mocks'
 
 import moment from 'moment'
+import { useEditTextHandlers } from '../../hooks/useEditTextHandlers'
 moment.suppressDeprecationWarnings = true
 
 export const Details = () => {
@@ -21,21 +22,11 @@ export const Details = () => {
     }, [navigate, params])
 
     const transparentEditBtnProps = { style: { background: 'transparent' } }
-
-    const handleSave = ({ name, value, prevValue }) => {
-        if (value !== prevValue) {
-            let isDate = moment(value)
-            if (isDate.isValid()) {
-                value = isDate.toDate()
-            }
-            element[name] = value
-        }
-    }
+    const { handleSave } = useEditTextHandlers(element)
 
     const handleSubmit = (e) => {
         console.log(element)
     }
-
 
     return (
         <div>

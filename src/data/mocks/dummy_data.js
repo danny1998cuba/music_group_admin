@@ -70,6 +70,7 @@ export const acts = [
         workplace: 'Villa Tropico',
         clothes: ['Black Shirt', 'Black Pant'],
         gains: {
+            date: new Date(),
             currecies: [
                 {
                     currency: 'USD',
@@ -86,11 +87,7 @@ export const acts = [
                     amount: 1000
                 },
             ],
-            founding: {
-                type: Number,
-                required: true,
-                default: 0
-            }
+            founding: 115
         }
     },
 ]
