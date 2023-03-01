@@ -3,6 +3,7 @@ const workplaceForm = [
         type: "text",
         name: "name",
         placeholder: "Name",
+        label: "Name",
         value: "",
         class: "form-group",
         validations: [
@@ -21,6 +22,7 @@ const workplaceForm = [
         type: "text",
         name: "direction",
         placeholder: "Direction",
+        label: "Direction",
         value: "",
         class: "form-group"
     },
@@ -28,6 +30,7 @@ const workplaceForm = [
         type: "date",
         name: "contract_from",
         placeholder: "Contract Date",
+        label: "Contract Date",
         value: "",
         class: "form-group",
         validations: [
@@ -42,6 +45,7 @@ const workplaceForm = [
         type: "date",
         name: "contract_to",
         placeholder: "End of contract",
+        label: "End of contract",
         value: "",
         class: "form-group",
     },
@@ -49,6 +53,7 @@ const workplaceForm = [
         type: "file",
         name: "photo",
         placeholder: "Photo",
+        label: "Photo",
         value: "",
         class: "form-group input-file",
         validations: [

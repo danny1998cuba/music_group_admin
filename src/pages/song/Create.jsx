@@ -21,7 +21,7 @@ export const Create = () => {
 
     return (
         <>
-            <h3>Create Song</h3>
+            <h3 className="page-title">Create Song</h3>
 
             <div className="row">
                 <div className="col-lg-8 col-md-7 col-sm-6 col-xs-12">

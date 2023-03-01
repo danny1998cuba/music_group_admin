@@ -6,37 +6,32 @@ export const useNotikaFormStyles = (apply, buttonClasses) => {
         apply.select && selectControls()
         apply.button && buttonList(buttonClasses)
         apply.radio && radioGroupControls()
+        header()
     }, [])
 
     return {}
 }
 
 const formControls = () => {
-    let inputs = [...document.querySelectorAll('.form-group')]
+    let inputs = [...document.querySelectorAll('.form-group>div')]
 
     inputs.forEach(fg => {
+        fg.classList.add('nk-int-st')
         let input = [...fg.childNodes].find(inp => inp.nodeName === 'INPUT')
+        fg.addEventListener('focusin', () => fg.classList.add('nk-toggled'))
+        fg.addEventListener('focusout', () => fg.classList.remove('nk-toggled'))
 
         if (input) {
             input.classList.add('form-control')
-
-            let wrapper = document.createElement('div')
-            wrapper.classList.add('nk-int-st')
-            input.parentElement.replaceChild(wrapper, input)
-            wrapper.appendChild(input)
-
-            wrapper.addEventListener('focusin', () => wrapper.classList.add('nk-toggled'))
-            wrapper.addEventListener('focusout', () => wrapper.classList.remove('nk-toggled'))
-
             if (input.type === 'file') {
-                fileControl(input, wrapper)
+                fileControl(input, fg)
             }
         }
     })
 }
 
 const selectControls = () => {
-    let selects = [...document.querySelectorAll('.select')]
+    let selects = [...document.querySelectorAll('.select>div')]
 
     selects.forEach(fg => {
         let select = [...fg.childNodes].find(inp => inp.nodeName === 'SELECT')
@@ -59,37 +54,23 @@ const radioGroupControls = () => {
     let groups = [...document.querySelectorAll('.radio-group')]
 
     groups.forEach(group => {
-        let radios = [...document.querySelectorAll('.radio-group label')]
-
-        let label = group.querySelector('b')
-        let lbl = document.createElement('label')
-        lbl.textContent = label.textContent
-        group.replaceChild(lbl, label)
-
-        let wrapper = document.createElement('div')
+        let wrapper = document.querySelector('.radio-group>div>div')
         wrapper.classList.add('nk-int-st')
 
+        let radios = [...wrapper.querySelectorAll('div')]
         radios.forEach(radio => {
+            radio.className = ""
             radio.classList.add('radio-inline')
-            wrapper.appendChild(radio)
         })
-
-        group.appendChild(wrapper)
     })
-
-
-
-
 }
 
 const fileControl = (input, wrapper) => {
     wrapper.classList.add('file-wrapper')
-    input.id = input.name
 
-    let title = document.createElement('label')
+    let title = wrapper.querySelector('label')
+    title.htmlFor = ''
     title.classList.add('title')
-    title.innerHTML = `${input.placeholder}: `
-    wrapper.appendChild(title)
 
     let label = document.createElement('label')
     label.innerHTML = `<a data-toggle="tooltip" data-placement="left" title="" class="btn btn-success notika-btn-success waves-effect" data-original-title="${input.placeholder}"><i class="notika-icon notika-sent"></i></a   >`
@@ -109,10 +90,29 @@ const fileControl = (input, wrapper) => {
 }
 
 const buttonList = (buttonClasses) => {
-    let inputs = [...document.querySelectorAll('.btn-list')]
+    let inputs = [...document.querySelectorAll('.btn-list div')]
 
     inputs.forEach(fg => {
         let input = [...fg.childNodes].find(inp => inp.nodeName === 'INPUT')
         buttonClasses.forEach(clazz => input.classList.add(clazz))
+    })
+}
+
+const header = () => {
+    let headers = [...document.querySelectorAll('.section-header')]
+
+    headers.forEach(header => {
+        header.style = ''
+
+        let parent = header.parentElement
+        let wrapper = document.createElement('div')
+
+        parent.replaceChild(wrapper, header)
+        wrapper.appendChild(header)
+        wrapper.classList.add('typography-hd-cr-3')
+
+        let hr = document.createElement('hr')
+        hr.className = 'small-separator'
+        wrapper.appendChild(hr)        
     })
 }

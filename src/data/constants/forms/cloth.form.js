@@ -39,6 +39,7 @@ const clothForm = [
         type: "text",
         name: "color",
         placeholder: "Color",
+        label: "Color",
         value: "",
         class: "form-group",
         validations: [
@@ -57,6 +58,7 @@ const clothForm = [
         type: "text",   //change to textarea
         name: "description",
         placeholder: "Description",
+        label: "Description",
         value: "",
         class: "form-group",
         validations: [

@@ -3,6 +3,7 @@ const activityForm = [
         type: "date",
         name: "date",
         placeholder: "Date",
+        label: "Date",
         value: "",
         class: "form-group",
         validations: [
@@ -39,14 +40,26 @@ const activityForm = [
         class: "form-group",
         options: []
     },
+
+    {
+        type: 'header',
+        text: 'Gains Details'
+    },
     // TODO: Add a custom dynamic component that accepts an array of objects of any type for the currencies
     {
         type: "number",
+        typeValue: "number",
         name: "founding",
         placeholder: "Founding",
-        value: "0",
+        label: "Founding",
+        value: 0,
         class: "form-group",
         validations: [
+            {
+                type: 'min',
+                value: 0,
+                message: 'The founding must be a positive number'
+            },
             {
                 type: "required",
                 message: "The founding is required"

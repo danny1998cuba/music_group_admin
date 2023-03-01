@@ -3,6 +3,7 @@ const memberForm = [
         type: "text",
         name: "first_name",
         placeholder: "First Name",
+        label: "First Name",
         value: "",
         class: "form-group",
         validations: [
@@ -21,6 +22,7 @@ const memberForm = [
         type: "text",
         name: "last_name",
         placeholder: "Last Name",
+        label: "Last Name",
         value: "",
         class: "form-group",
         validations: [
@@ -39,6 +41,7 @@ const memberForm = [
         type: "text",
         name: "identification",
         placeholder: "Identification",
+        label: "Identification",
         value: "",
         class: "form-group",
         validations: [
@@ -57,6 +60,7 @@ const memberForm = [
         type: "date",
         name: "birth_date",
         placeholder: "Birth date",
+        label: "Birth date",
         value: "",
         class: "form-group",
         validations: [
@@ -75,6 +79,7 @@ const memberForm = [
         type: "text",
         name: "position",
         placeholder: "Position",
+        label: "Position",
         value: "",
         class: "form-group",
         validations: [
@@ -94,6 +99,7 @@ const memberForm = [
         name: "sex",
         label: "Sex",
         class: "form-group",
+        inlineOpts: 'true',
         value: "",
         options: [
             {

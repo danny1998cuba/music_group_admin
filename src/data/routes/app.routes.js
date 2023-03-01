@@ -30,7 +30,7 @@ export const AdminRoutes = () => {
     const routes = AppRoutes
 
     return [
-        <Route key={'dash'} path='' element={<><h3>Dashboard</h3></>} />,
+        <Route key={'dash'} path='' element={<><h3 className="page-title">Dashboard</h3></>} />,
         <Route key={'not_imp'} path='not_imp' element={
             <div style={{
                 'display': 'flex',

@@ -9,7 +9,7 @@ export const List = () => {
     return (
         <div>
             <div className="row" style={{ 'marginBottom': '20px' }}>
-                <div className="col-sm-10"><h3>Song</h3></div>
+                <div className="col-sm-10"><h3 className="page-title">Song</h3></div>
                 <div className="col-sm-2 text-right">
                     <NavLink to={`/${AppRoutes.MainRoutes.dashboard}/${AppRoutes.AdminRoutes.song}/${AppRoutes.CrudRoutes.create}`}
                         className="btn btn-success notika-btn-success waves-effect">

@@ -6342,3 +6342,19 @@ form .file-wrapper {
 .flex-column {
     flex-direction: column;
 }
+
+.small-separator {
+    width: 33%;
+    height: 0;
+    margin: -5px 0 1rem 1rem;
+    border: 1.5px solid #00c292;
+}
+
+.section-header { 
+    font-size: 18px !important;
+    margin-top: 2.5rem;
+}
+
+.page-title {
+    margin-bottom: 2.5rem;
+}

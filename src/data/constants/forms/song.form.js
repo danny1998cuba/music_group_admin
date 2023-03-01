@@ -3,6 +3,7 @@ const songForm = [
         type: "text",
         name: "title",
         placeholder: "Title",
+        label: "Title",
         value: "",
         class: "form-group",
         validations: [
@@ -19,8 +20,32 @@ const songForm = [
     },
     {
         type: "text",
+        name: "arranger",
+        placeholder: "Arranger",
+        label: "Arranger",
+        value: "",
+        class: "form-group",
+        validations: [
+            {
+                type: "minLength",
+                value: 3,
+                message: "Min. 3 characters",
+            },
+            {
+                type: "required",
+                message: "The arranger is required"
+            },
+        ],
+    },
+    {
+        type: 'header',
+        text: 'Composer Info'
+    },
+    {
+        type: "text",
         name: "composer_name",
         placeholder: "Composer name",
+        label: "Composer name",
         value: "",
         class: "form-group",
         validations: [
@@ -68,64 +93,55 @@ const songForm = [
     },
     {
         type: "number",
+        typeValue: 'number',
         name: "composer_birth_year",
         placeholder: "Birth year",
-        value: "",
-        class: "form-group",
-        // validations: [
-        //     {
-        //         type: "min",
-        //         value: 1800,
-        //         message: "Select a year after 1800",
-        //     },
-        //     {
-        //         type: "max",
-        //         value: new Date().getFullYear(),
-        //         message: "Select a year before the current one",
-        //     }
-        // ],
-    },
-    {
-        type: "number",
-        name: "composer_death_year",
-        placeholder: "Death year",
-        value: "",
-        class: "form-group",
-        // validations: [
-        //     {
-        //         type: "min",
-        //         value: 1800,
-        //         message: "Select a year after 1800",
-        //     },
-        //     {
-        //         type: "max",
-        //         value: new Date().getFullYear(),
-        //         message: "Select a year before the current one",
-        //     }
-        // ],
-    },
-    {
-        type: "text",
-        name: "arranger",
-        placeholder: "Arranger",
+        label: "Birth year",
         value: "",
         class: "form-group",
         validations: [
             {
-                type: "minLength",
-                value: 3,
-                message: "Min. 3 characters",
+                type: "min",
+                value: 1800,
+                message: "Select a year after 1800",
             },
             {
-                type: "required",
-                message: "The arranger is required"
-            },
+                type: "max",
+                value: new Date().getFullYear(),
+                message: "Select a year before the current one",
+            }
         ],
+    },
+    {
+        type: "number",
+        typeValue: 'number',
+        name: "composer_death_year",
+        placeholder: "Death year",
+        label: "Death year",
+        value: "",
+        class: "form-group",
+        validations: [
+            {
+                type: "min",
+                value: 1800,
+                message: "Select a year after 1800",
+            },
+            {
+                type: "max",
+                value: new Date().getFullYear(),
+                message: "Select a year before the current one",
+            }
+        ],
+    },
+    {
+        type: 'header',
+        text: 'Song Details'
     },
     {
         type: "text",
         name: "genre",
         placeholder: "Genre",
+        label: "Genre",
         value: "",
         class: "form-group",
         validations: [
@@ -142,8 +158,10 @@ const songForm = [
     },
     {
         type: "number",
+        typeValue: 'number',
         name: "details_tempo",
         placeholder: "Tempo",
+        label: "Tempo",
         value: "",
         class: "form-group",
         validations: [
@@ -240,20 +258,22 @@ const songForm = [
         type: "number",
         name: "measures_number",
         placeholder: "Measures number",
+        label: "Measures number",
         value: "",
         class: "form-group",
-        // validations: [
-        //     {
-        //         type: "min",
-        //         value: 10,
-        //         message: "There has to be at least 10 measures.",
-        //     }
-        // ],
+        validations: [
+            {
+                type: "min",
+                value: 10,
+                message: "There has to be at least 10 measures.",
+            }
+        ],
     },
     {
         type: "file",
         name: "scores",
         placeholder: "Score",
+        label: "Score",
         value: "",
         class: "form-group input-file",
     },
