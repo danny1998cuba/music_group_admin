@@ -2,8 +2,16 @@ import { ApiRoutes } from ".."
 
 const countries = async () => {
     let countries = []
-    await fetch(ApiRoutes.ApiRoutes.countries_dev).then(res => res.json()).then(res => countries = res)
-    
+    await fetch(ApiRoutes.ApiRoutes.countries_produc)
+        .then(res => res.json())
+        .then(res => countries = res)
+        .catch(err => console.log('No production'))
+        
+    countries.length == 0 && await fetch(ApiRoutes.ApiRoutes.countries_dev)
+        .then(res => res.json())
+        .then(res => countries = res)
+        .catch(err => console.log('No local'))
+
     let options = countries.map(countrie => {
         return {
             value: countrie,
