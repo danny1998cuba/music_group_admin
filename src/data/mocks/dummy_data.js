@@ -3,19 +3,22 @@ export const clothes = [
         id: 'lasdafdsf432',
         category: 'Pant',
         color: 'Black',
-        description: 'lorem ipsum bla vla bla'
+        description: 'lorem ipsum bla vla bla',
+        added: new Date()
     },
     {
         id: 'lasdafdsge32',
         category: 'Shirt',
         color: 'Black',
-        description: 'lorem ipsum bla vla bla'
+        description: 'lorem ipsum bla vla bla',
+        added: new Date()
     },
     {
         id: 'lasdafdsf462',
         category: 'Shirt',
         color: 'Blue',
-        description: 'lorem ipsum bla vla bla'
+        description: 'lorem ipsum bla vla bla',
+        added: new Date()
     },
 ]
 export const members = [
@@ -26,7 +29,8 @@ export const members = [
         identification: '98022405864',
         birth_date: new Date('1998-02-24'),
         position: 'Baritone sax',
-        sex: 'm'
+        sex: 'm',
+        added: new Date()
     },
     {
         id: 'dasfdsfd354',
@@ -35,7 +39,8 @@ export const members = [
         identification: '86042304796',
         birth_date: new Date('1986-04-23'),
         position: 'Clarinet',
-        sex: 'm'
+        sex: 'm',
+        added: new Date()
     },
 ]
 export const songs = [
@@ -60,7 +65,8 @@ export const songs = [
         },
         scores: [
             '/ildas/fds4fs65as.pdf'
-        ]
+        ],
+        added: new Date()
     },
 ]
 export const acts = [
@@ -88,6 +94,7 @@ export const acts = [
                 },
             ],
             founding: 115
-        }
+        },
+        added: new Date()
     },
 ]

@@ -2,6 +2,7 @@ import { DynamicForm } from "d98c_dynamic-forms";
 import { useEffect, useState } from "react";
 import { RecentAdded } from "../../components";
 import { Forms } from "../../data/constants";
+import { data } from "../../data/mocks";
 import { notikaFormStyles } from "../../helpers";
 
 export const Create = () => {
@@ -37,7 +38,7 @@ export const Create = () => {
                     }
                 </div>
                 <div className="col-lg-4 col-md-5 col-sm-6 col-xs-12">
-                    <RecentAdded />
+                    <RecentAdded data={data.clothes.slice(0, 3)} keys={{ name: 'description', desc: 'added' }} />
                 </div>
             </div>
         </>
