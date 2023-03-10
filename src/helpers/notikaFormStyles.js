@@ -1,15 +1,11 @@
 import { useEffect } from 'react';
 
-export const useNotikaFormStyles = (apply, buttonClasses) => {
-    useEffect(() => {
-        apply.controls && formControls()
-        apply.select && selectControls()
-        apply.button && buttonList(buttonClasses)
-        apply.radio && radioGroupControls()
-        header()
-    }, [])
-
-    return {}
+export const notikaFormStyles = (apply, buttonClasses) => {
+    apply.controls && formControls()
+    apply.select && selectControls()
+    apply.button && buttonList(buttonClasses)
+    apply.radio && radioGroupControls()
+    header()
 }
 
 const formControls = () => {
@@ -113,6 +109,6 @@ const header = () => {
 
         let hr = document.createElement('hr')
         hr.className = 'small-separator'
-        wrapper.appendChild(hr)        
+        wrapper.appendChild(hr)
     })
 }
