@@ -560,7 +560,7 @@ body {}
 .ntd-ctn {
     position: absolute;
     top: 8px;
-    left: -8px;
+    right: -10px;
     font-size: 10px;
     background: #e46a76;
     height: 18px;
@@ -577,8 +577,8 @@ body {}
     border-radius: 50%;
     position: absolute;
     display: inline-block;
-    top: 3px;
-    left: -14px;
+    top: 2.5px;
+    right: -1px;
 }
 
 .spinner4:after,

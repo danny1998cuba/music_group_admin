@@ -6,11 +6,13 @@ const countries = async () => {
         .then(res => res.json())
         .then(res => countries = res)
         .catch(err => console.log('No production'))
-        
+
     countries.length == 0 && await fetch(ApiRoutes.ApiRoutes.countries_dev)
         .then(res => res.json())
         .then(res => countries = res)
         .catch(err => console.log('No local'))
+
+    if (countries.length == 0) throw 'No countries data found';
 
     let options = countries.map(countrie => {
         return {

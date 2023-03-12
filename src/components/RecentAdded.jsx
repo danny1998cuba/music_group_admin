@@ -8,7 +8,7 @@ export const RecentAdded = ({
         <div className="recent-post-wrapper notika-shadow sm-res-mg-t-30">
             <div className="recent-post-ctn">
                 <div className="recent-post-title">
-                    <h2>Recent Added</h2>
+                    <h2>Recently Added</h2>
                 </div>
             </div>
             <div className="recent-post-items">
@@ -20,7 +20,13 @@ export const RecentAdded = ({
                                     <img src="/img/post/2.jpg" alt="" />
                                 </div>
                                 <div className="recent-post-it-ctn">
-                                    <h2>{row[keys.name]}</h2>
+                                    <h2>
+                                        {
+                                            keys.name.split(' ').map(name => (
+                                                `${row[name]} `
+                                            ))
+                                        }
+                                    </h2>
                                     <p>Added {row[keys.desc].toLocaleString()}</p>
                                 </div>
                             </div>

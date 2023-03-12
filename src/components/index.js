@@ -11,6 +11,7 @@ import { SignUp } from './auth/SignUp'
 // Custom Components
 import { DataTable } from './DataTable'
 import { RecentAdded } from './RecentAdded'
+import { Loader } from './Loader/Loader'
 
 
 export {
@@ -26,5 +27,6 @@ export {
 
     // Custom Components
     DataTable,
-    RecentAdded
+    RecentAdded,
+    Loader
 }

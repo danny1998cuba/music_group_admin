@@ -895,11 +895,13 @@
 	}
 
 	.ntd-ctn {
-		left: -25px;
+		right: 5px;
+		top: 0;
 	}
 
 	.spinner4 {
-		left: -30px;
+		top: -5.5px;
+		right: 14.5px;
 	}
 
 	.floating-numner p {
