@@ -1,9 +1,23 @@
-import { NavLink } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { NavLink, useLocation } from "react-router-dom"
+import { AppRoutes } from "../data/constants"
 import { mainMenuItems } from "../data/mocks"
 import './mainMenu.css'
 
 // TODO - Change Active Menu
 export const MainMenu = () => {
+  const location = useLocation()
+  const [active, setActive] = useState(0)
+  
+  useEffect(() => {
+    if (location.pathname != `/${AppRoutes.MainRoutes.dashboard}/not_imp`) {
+      let menu = mainMenuItems.filter(menu => menu.submenu.some(submenu => location.pathname.includes(submenu.href)))
+      menu.length > 1 ? setActive(mainMenuItems.indexOf(menu[1])) : setActive(0)
+    } else {
+      setActive(0)
+    }
+  }, [])
+
   return (
     <div className="main-menu-area mg-tb-40">
       <div className="container">
@@ -21,7 +35,7 @@ export const MainMenu = () => {
                 <ul className="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                   {
                     mainMenuItems.map((menu, index) => (
-                      <li className={index === 0 ? 'active' : ''} key={menu.id}>
+                      <li className={index === active ? 'active' : ''} key={menu.id}>
                         <a data-toggle="tab" href={`#${menu.id}`}>
                           <i className={`${menu.icon.includes('notika') ? 'notika-icon' : 'fa'} ${menu.icon}`}></i> {menu.name}
                         </a>
@@ -32,7 +46,7 @@ export const MainMenu = () => {
                 <div className="tab-content custom-menu-content">
                   {
                     mainMenuItems.map((menu, index) => (
-                      <div key={menu.id} id={menu.id} className={`tab-pane notika-tab-menu-bg animated flipInX ${index === 0 ? 'in active' : ''}`}>
+                      <div key={menu.id} id={menu.id} className={`tab-pane notika-tab-menu-bg animated flipInX ${index === active ? 'in active' : ''}`}>
                         <ul className="notika-main-menu-dropdown">
                           {
                             menu.submenu.map(submenu => (
